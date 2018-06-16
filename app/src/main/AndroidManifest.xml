@@ -9,8 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme2">
-        <activity android:name=".LogIn" />
-        <activity android:name=".MainActivity">
+
+        <activity android:name=".StartSlider">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,10 +22,25 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
+        <activity android:name=".LogIn" />
+
         <activity android:name=".SignIn" />
+
         <activity android:name=".SignInTwo" />
-        <activity android:name=".ResetPassword" />
-        <activity android:name=".HomePage"></activity>
+
+        <activity android:name=".ResetPassword"
+            android:label="Reset Password"
+            android:parentActivityName=".LogIn">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".LogIn"
+                />
+        </activity>
+
+        <activity android:name=".HomePage" />
+
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>
