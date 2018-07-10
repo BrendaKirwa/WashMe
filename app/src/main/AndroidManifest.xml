@@ -25,7 +25,9 @@
         <activity android:name=".SignIn" />
         <activity android:name=".SignInTwo" />
         <activity android:name=".ResetPassword" />
-        <activity android:name=".HomePage"></activity>
+        <activity android:name=".HomePage" />
+        <activity android:name=".Bookings"
+            android:theme="@style/Booking"/>
     </application>
 
 </manifest>

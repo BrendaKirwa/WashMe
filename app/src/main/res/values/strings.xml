@@ -17,4 +17,10 @@
     <string name="cont">CONTINUE</string>
     <string name="already_have_an_account"><u>Already have an Account</u></string>
     <string name="reset_password">RESET PASSWORD</string>
+    <string name="title_activity_see">see</string>
+    <string name="vehicle_suv">SUV</string>
+    <string name="vehicle_sedan">SEDAN/COUPE</string>
+    <string name="vehicle_hatchback">HATCHBACK</string>
+    <string name="vehicle_van">VAN/TRUCK</string>
+    <string name="vehicle_convertible">CONVERTIBLE</string>
 </resources>
