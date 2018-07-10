@@ -22,4 +22,9 @@ public class LogIn extends AppCompatActivity {
         Intent intent = new Intent(this, SignInTwo.class);
         startActivity(intent);
     }
+
+    public void startHomeActivity(View view) {
+        Intent intent = new Intent(this, HomePage.class);
+        startActivity(intent);
+    }
 }
