@@ -75,6 +75,7 @@
         android:layout_marginBottom="145dp"
         android:layout_marginEnd="-55dp"
         android:layout_marginRight="-55dp"
+        android:onClick="startHomeActivity"
         android:background="@drawable/rounder_button"
         android:paddingLeft="7dp"
         android:text="@string/submit" />
