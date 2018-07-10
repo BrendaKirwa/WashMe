@@ -6,13 +6,35 @@
     tools:context=".Bookings"
     tools:showIn="@layout/activity_bookings">
 
+    <TextView
+        android:id="@+id/Vehicles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_centerHorizontal="true"
+        android:text="@string/select_the_vehicles"
+        android:textSize="@dimen/txtview_boking"
+        android:textColor="@color/yellow_accent"/>
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/vehicletype"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
+        android:layout_below="@id/Vehicles"
         android:clipToPadding="false"
         android:scrollbars="horizontal"/>
+
+    <TextView
+        android:id="@+id/Packages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/vehicletype"
+        android:text="@string/select_the_package"
+        android:textSize="@dimen/txtview_boking"
+        android:textColor="@color/yellow_accent"/>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/packagetype"
@@ -21,7 +43,18 @@
 
         android:clipToPadding="false"
         android:scrollbars="horizontal"
-        android:layout_below="@id/vehicletype"/>
+        android:layout_below="@id/Packages"/>
+
+    <TextView
+        android:id="@+id/Services"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/packagetype"
+        android:text="@string/select_the_service"
+        android:textSize="@dimen/txtview_boking"
+        android:textColor="@color/yellow_accent"/>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/servicetype"
@@ -30,6 +63,6 @@
 
         android:clipToPadding="false"
         android:scrollbars="horizontal"
-        android:layout_below="@id/packagetype"/>
+        android:layout_below="@id/Services"/>
 
 </RelativeLayout>

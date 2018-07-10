@@ -4,4 +4,5 @@
     <dimen name="cardview_txt_padding">10dp</dimen>
     <dimen name="cardview_txt_txtsize">15dp</dimen>
     <dimen name="cardview_checkbox">30dp</dimen>
+    <dimen name="txtview_boking">11pt</dimen>
 </resources>
