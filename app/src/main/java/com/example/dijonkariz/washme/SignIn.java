@@ -50,6 +50,7 @@ public class SignIn extends AppCompatActivity {
             String no = bundle.getString("no");
         }
 
+        
         Toast.makeText(getApplicationContext(), "fname.lname.no.Email.Password", Toast.LENGTH_LONG).show();
     }
 
