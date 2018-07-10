@@ -7,4 +7,5 @@
     <color name="white">#FFF</color>
     <color name="main_color">#000033</color>
     <color name="washwhite">#cccccc</color>
+    <color name="TextInputError">#ff3737</color>
 </resources>

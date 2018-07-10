@@ -12,6 +12,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/main_color</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="textColorError">@color/TextInputError</item>
     </style>
     <style name="LogoName" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:textColor">@color/yellow_accent</item>
