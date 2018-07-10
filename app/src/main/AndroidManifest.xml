@@ -30,6 +30,10 @@
         <activity android:name=".SignIn" />
 
         <activity android:name=".SignInTwo" />
+        <activity android:name=".ResetPassword" />
+        <activity android:name=".HomePage" />
+        <activity android:name=".Bookings"
+            android:theme="@style/Booking"/>
 
         <activity android:name=".ResetPassword"
             android:label="Reset Password"
