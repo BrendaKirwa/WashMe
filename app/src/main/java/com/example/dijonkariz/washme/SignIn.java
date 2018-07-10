@@ -51,7 +51,7 @@ public class SignIn extends AppCompatActivity {
         }
 
         
-        Toast.makeText(getApplicationContext(), "fname.lname.no.Email.Password", Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(), "fname", Toast.LENGTH_LONG).show();
     }
 
 

@@ -7,64 +7,36 @@
     android:layout_height="match_parent"
     android:background="@drawable/cars2"
     tools:context=".MainActivity">
-    <ImageView
-        android:layout_width="119dp"
-        android:layout_height="74dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="119dp"
-        android:src="@drawable/carlogo" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_img"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginLeft="100dp"
+        android:src="@drawable/tick"
+        app:civ_border_color="@color/white"
+        app:civ_border_width="2dp" />
 
     <TextView
-        android:id="@+id/logo_name"
-        style="@style/LogoName"
-        android:layout_width="111dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="212dp"
-        android:fontFamily="@font/chiller"
-        android:text="@string/app_name"
-        android:textSize="40sp" />
+        android:layout_below="@id/profile_img"
+        android:layout_marginLeft="100dp"
+        android:id="@+id/names"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_marginTop="40dp"/>
 
-    <Button
-        android:id="@+id/signinbtn_login"
-        style="@style/SignIN"
-        android:layout_width="121dp"
+    <ProgressBar
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/white_round_corner"
-        android:text="@string/sign_in"
-        android:layout_marginTop="340dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
-        android:onClick="SignInActivityStart"
-        />
-
-    <Button
-        android:id="@+id/loginbtn_login"
-        style="@style/SignIN"
-        android:layout_width="121dp"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/signinbtn_login"
-        android:background="@drawable/white_round_corner"
-        android:text="@string/log_in"
-        android:layout_alignParentRight="true"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginTop="340dp"
-        android:onClick="LoginActivityStart"
-        />
-
-    <Button
-        style="@style/SignIN"
-        android:layout_width="195dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="98dp"
-        android:paddingLeft="7dp"
-        android:background="@drawable/white_round_corner"
-        android:drawableLeft="@drawable/google"
-        android:text="@string/login_with_gmail" />
+        android:indeterminate="true"
+        android:indeterminateTintMode="src_atop"
+        android:indeterminateTint="@color/white"
+        android:id="@+id/progress"
+        android:layout_marginLeft="180dp"
+        android:layout_below="@id/names"/>
 
 </RelativeLayout>

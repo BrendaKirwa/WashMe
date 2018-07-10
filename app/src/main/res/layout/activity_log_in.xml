@@ -47,6 +47,7 @@
         android:layout_marginTop="280dp"
         android:background="@drawable/bottom_line"
         android:hint="@string/e_mail"
+        android:id="@+id/loginemail"
         android:textColorHint="@color/white"
         android:textColor="@color/white"
         android:textSize="18dp"
@@ -55,6 +56,7 @@
     <EditText
         android:layout_width="255dp"
         android:layout_height="36dp"
+        android:id="@+id/loginpassword"
         android:layout_marginLeft="70dp"
         android:layout_marginRight="70dp"
         android:layout_marginTop="330dp"
@@ -66,6 +68,7 @@
         app:fontFamily="@font/roboto" />
 
     <Button
+        android:id="@+id/login"
         style="@style/SignIN"
         android:layout_width="238dp"
         android:layout_height="wrap_content"
@@ -75,7 +78,6 @@
         android:layout_marginBottom="145dp"
         android:layout_marginEnd="-55dp"
         android:layout_marginRight="-55dp"
-        android:onClick="startHomeActivity"
         android:background="@drawable/rounder_button"
         android:paddingLeft="7dp"
         android:text="@string/submit" />
