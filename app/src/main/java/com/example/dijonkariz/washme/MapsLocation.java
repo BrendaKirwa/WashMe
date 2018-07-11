@@ -207,7 +207,6 @@ public class MapsLocation extends FragmentActivity implements OnMapReadyCallback
 
                                 JSONObject map = array.getJSONObject(i);
                                 MarkerOptions options = new MarkerOptions()
-                                        .icon(BitmapDescriptorFactory.fromResource(R.drawable.location))
                                         .title(map.getString("branch_name"))
                                         .position(new LatLng(map.getDouble("latitude"), map.getDouble("longitude")))
                                         .snippet(map.getString("opening_time") + "," + map.getString("closing_time"));

@@ -63,7 +63,8 @@
 
         <activity
             android:name=".MapsLocation"
-            android:label="@string/title_activity_maps_location"></activity>
+            android:label="@string/title_activity_maps_location" />
+        <activity android:name=".Book"></activity>
     </application>
 
 </manifest>

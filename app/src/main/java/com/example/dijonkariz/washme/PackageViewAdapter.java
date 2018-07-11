@@ -10,27 +10,31 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.example.dijonkariz.washme.Model.Package;
 
 import java.util.List;
 
 public class PackageViewAdapter extends RecyclerView.Adapter<PackageViewAdapter.PackageViewHolder>
 {
     private Context mContext;
-    private List<Item> itemList;
+    private List<Package> itemList;
 
     public class PackageViewHolder extends RecyclerView.ViewHolder
     {
-        public TextView package_name;
-//        public ImageView package_pic;
+        public TextView package_name, price, time_period, details;
+
 
         public PackageViewHolder(View view)
         {
             super(view);
             package_name = (TextView) view.findViewById(R.id.package_name);
-//            package_pic = (ImageView) view.findViewById(R.id.package_pic);
+            price = (TextView) view.findViewById(R.id.package_price);
+            time_period = (TextView) view.findViewById(R.id.package_time);
+            details = (TextView) view.findViewById(R.id.package_details);
+
         }
     }
-    public PackageViewAdapter(Context mContext, List<Item> itemList)
+    public PackageViewAdapter(Context mContext, List<Package> itemList)
     {
         this.mContext = mContext;
         this.itemList = itemList;
@@ -45,9 +49,12 @@ public class PackageViewAdapter extends RecyclerView.Adapter<PackageViewAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull PackageViewAdapter.PackageViewHolder holder, int position) {
-        Item item = itemList.get(position);
-        holder.package_name.setText(item.getName());
-//        Glide.with(mContext).load(item.getPic()).into(holder.package_pic);
+        Package item = itemList.get(position);
+        holder.package_name.setText(item.getPackage_name());
+        holder.price.setText(item.getPrice());
+        holder.time_period.setText(item.getTimePeriod());
+        holder.details.setText(item.getDetails());
+
     }
 
     @Override

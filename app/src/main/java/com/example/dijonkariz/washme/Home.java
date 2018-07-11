@@ -80,7 +80,7 @@ public class Home extends AppCompatActivity
         } else if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_slideshow) {
-
+            startActivity(new Intent(this,Book.class));
         } else if (id == R.id.nav_manage) {
 
         }

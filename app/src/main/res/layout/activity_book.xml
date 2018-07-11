@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/cars2"
+    android:orientation="vertical"
+    tools:context="com.example.dijonkariz.washme.Book">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/yellow_accent"
+        android:layout_gravity="center_horizontal"
+        android:text="Choose a Vehicle Type"
+        android:textSize="16dp"
+        app:fontFamily="@font/roboto" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/vehicle_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/yellow_accent"
+        android:layout_gravity="center_horizontal"
+        android:text="Choose a Package"
+        android:textSize="16dp"
+        app:fontFamily="@font/roboto" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/package_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/yellow_accent"
+        android:layout_gravity="center_horizontal"
+        android:text="Choose a Service"
+        android:textSize="16dp"
+        app:fontFamily="@font/roboto" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/service_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>
