@@ -40,7 +40,7 @@ public class Book extends AppCompatActivity {
     private static final String URL_VEHICLE = "http://washmeapplication.herokuapp.com/api/vehicle";
     private static final String URL_PACKAGE = "http://washmeapplication.herokuapp.com/api/package";
     private static final String URL_SERVICE = "http://washmeapplication.herokuapp.com/api/service";
-    private static final String URL_BOOK = "http://washmeapplication.herokuapp.com/api/book";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -222,58 +222,5 @@ public class Book extends AppCompatActivity {
         Volley.newRequestQueue(this).add(stringRequest);
     }
 
-    private void sddBooking() {
 
-        String date = workout.getString("book_date");
-        String time = workout.getString("book_time");
-        String vehicle = workout.getString("vehicle_id");
-        String packages = workout.getString("package_id");
-        String services = workout.getString("service_id");
-        String customer = workout.getString("customer_id");
-        String washer = workout.getString("washer_id");
-        String status = workout.getString("status");
-        String amount = workout.getString("amount");
-
-
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL_BOOK, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-
-                try {
-
-                    JSONObject obj = new JSONObject(response);
-
-                    if (!obj.getBoolean("status")) {
-
-                        Toast.makeText(getApplicationContext(), obj.getString("message"), Toast.LENGTH_LONG).show();
-
-
-                    } else {
-                        Toast.makeText(getApplicationContext(), obj.getString("message"), Toast.LENGTH_LONG).show();
-                    }
-                    startActivity(new Intent(getApplicationContext(), Book.class));
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_LONG).show();
-            }
-        }) {
-            @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String, String> params = new HashMap<>();
-                params.put("book_date", book_date);
-                params.put("book_time", book_time);
-                params.put("vehicle_id", vehicle_id);
-                params.put("package_id", package_id);
-                params.put("service_id", service_id);
-                params.put("customer_id", customer_id);
-                return params;
-            }
-        };
-        Volley.newRequestQueue(this).add(stringRequest);
-    }
 }

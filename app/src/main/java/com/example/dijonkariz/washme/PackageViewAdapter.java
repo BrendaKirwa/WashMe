@@ -1,7 +1,9 @@
 package com.example.dijonkariz.washme;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,16 +23,18 @@ public class PackageViewAdapter extends RecyclerView.Adapter<PackageViewAdapter.
 
     public class PackageViewHolder extends RecyclerView.ViewHolder
     {
-        public TextView package_name, price, time_period, details;
-
+        public TextView package_name, price, time_period, details,id;
+        CardView cardView;
 
         public PackageViewHolder(View view)
         {
             super(view);
+            cardView = (CardView) view.findViewById(R.id.cardview_package);
             package_name = (TextView) view.findViewById(R.id.package_name);
             price = (TextView) view.findViewById(R.id.package_price);
             time_period = (TextView) view.findViewById(R.id.package_time);
             details = (TextView) view.findViewById(R.id.package_details);
+            id = (TextView) view.findViewById(R.id.package_id);
 
         }
     }
@@ -48,12 +52,21 @@ public class PackageViewAdapter extends RecyclerView.Adapter<PackageViewAdapter.
     }
 
     @Override
-    public void onBindViewHolder(@NonNull PackageViewAdapter.PackageViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull PackageViewAdapter.PackageViewHolder holder, final int position) {
         Package item = itemList.get(position);
+        holder.id.setText(item.getId());
         holder.package_name.setText(item.getPackage_name());
         holder.price.setText(item.getPrice());
         holder.time_period.setText(item.getTimePeriod());
         holder.details.setText(item.getDetails());
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext, finishBooking.class);
+                intent.putExtra("Vehicle_id", itemList.get(position).getId());
+                mContext.startActivity(intent);
+            }
+        });
 
     }
 
