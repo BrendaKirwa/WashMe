@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.dijonkariz.washme.Model.Package;
@@ -54,7 +55,7 @@ public class PackageViewAdapter extends RecyclerView.Adapter<PackageViewAdapter.
     @Override
     public void onBindViewHolder(@NonNull PackageViewAdapter.PackageViewHolder holder, final int position) {
         Package item = itemList.get(position);
-        holder.id.setText(item.getId());
+//        holder.id.setText(item.getId());
         holder.package_name.setText(item.getPackage_name());
         holder.price.setText(item.getPrice());
         holder.time_period.setText(item.getTimePeriod());
@@ -62,8 +63,9 @@ public class PackageViewAdapter extends RecyclerView.Adapter<PackageViewAdapter.
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(mContext, R.string.txt_package_toast, Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(mContext, finishBooking.class);
-                intent.putExtra("Vehicle_id", itemList.get(position).getId());
+                intent.putExtra("Package_id", itemList.get(position).getId());
                 mContext.startActivity(intent);
             }
         });

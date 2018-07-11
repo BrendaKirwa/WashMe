@@ -46,9 +46,9 @@ public class finishBooking extends AppCompatActivity {
         customer.getEditText().setText(String.valueOf(user.getId()));
 
         Intent intent = getIntent();
-        String Vehicle_id = intent.getExtras().getString("Vehicle_id");
+        String Package_id = intent.getExtras().getString("Package_id");
 
-        vehicle.getEditText().setText(Vehicle_id);
+        vehicle.getEditText().setText(Package_id);
     }
 
     public void processDatePickerResult(int year, int month, int day) {
